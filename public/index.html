@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸 사주봐줄게 - 커플&우정 사주</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+  :root {
+    --pink: #FFB3C6;
+    --pink-dark: #FF85A1;
+    --peach: #FFDDD2;
+    --yellow: #FFF3B0;
+    --purple: #E8C5E5;
+    --text: #5A3E4B;
+    --text-light: #9B7B87;
+    --white: #FFFAF9;
+    --card-bg: rgba(255,255,255,0.85);
+    --shadow: 0 8px 30px rgba(255,133,161,0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #FFF0F5 0%, #FFF8E7 50%, #F0F0FF 100%);
+    min-height: 100vh;
+    color: var(--text);
+  }
+
+  /* ===== 헤더 ===== */
+  header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    position: relative;
+  }
+  .header-emoji { font-size: 48px; display: block; margin-bottom: 8px; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  header h1 { font-size: 2rem; font-weight: 700; color: var(--pink-dark); letter-spacing: -1px; }
+  header p { margin-top: 6px; color: var(--text-light); font-size: 0.95rem; }
+
+  .stars { font-size: 18px; letter-spacing: 4px; margin-top: 8px; }
+
+  /* ===== 탭 ===== */
+  .tab-wrap {
+    displabottom: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .tab-wrap::after { content: ''; display: block; }
+  .tab-wrap .tab {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .tab-wrap .tab.active {
+    color: var(--pink-dark);
+    border-bottom-color: var(--pink-dark);
+    font-weight: 600;
+  }
+
+  /* ===== 키� ===== */
+  .card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  /* ===== 이런 ===== */
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--pink-dark);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ===== 이유기 ===== */
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 6px;
+  }
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #FFD1E3;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus {
+    border-color: var(--pink-dark);
+  }
+
+  /* ===== 핓치 ===== */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--pink-dark), #FF6A95);
+    color: white;
+    box-shadow: 0 4px 20px rgba(255,133,161,0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(255,133,161,0.5);
+  }
+  .btn-kakao {
+    background: #FEE500;
+    color: #3C1E1E;
+    margin-top: 12px;
+  }
+
+  /* ===== 결제 高캼 ===== */
+  .pay-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .pay-overlay.show { display: flex; }
+  .pay-modal {
+    background: white;
+    border-radius: 24px;
+    padding: 32px 24px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+  }
+  .pay-title { font-size: 1.3rem; font-weight: 700; color: var(--pink-dark); margin-bottom: 12px; }
+  .pay-desc { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
+  .pay-price { font-size: 1.8rem; font-weight: 700; color: var(--pink-dark); margin-bottom: 20px; }
+
+  .wait-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+  }
+  .wait-overlay.show { display: flex; }
+  .wait-modal {
+    background: white;
+    border-radius: 24px;
+    padding: 32px 24px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ===== 럈가 ===== */
+  .result-section {
+    display: none;
+  }
+  .result-section.show { display: block; }
+
+  .score-box {
+    text-align: center;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .score-number {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    display: block;
+  }
+  .score-label { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 8px; }
+  .score-emoji { font-size: 2rem; margin-top: 12px; }
+
+  .detail-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .detail-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--pink-dark); margin-bottom: 10px; }
+  .detail-card p { color: var(--text-light); font-size: 0.9rrem; line-height: 1.7; }
+
+  /* ===== 섈터 ===== */
+  .share-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .share-btn {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .share-btn.kakao { background: #FEE500; color: #3C1E1E; }
+  .share-btn.link { background: #F0F0FF; color: var(--text); }
+
+  /* ===== r으로 ===== */
+  @media (max-width: 480px) {
+    .container { padding: 0 12px; }
+    .score-number { font-size: 4rem; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+<header>
+  <span class="header-emoji">🌸</span>
+  <h1>𝌋𝌏𝋆𝌐𝌆‍𝌏𝌊𝌌𝘉𝌊𝌈𝘋𝌊</h1>
+  <p>이유한기늘에 다스 결제 풍근 동인는</p>
+  <div class="stars">☕몄☕몄☕몄☕몄☕몄</div>
+</header>
+<div class="container">
+
+<div class="tab-wrap">
+  <button class="tab active" onclick="switchTab('couple')">💩 couple 제다</button>
+  <button class="tab" onclick="switchTab('friend')">🐇 friend 제다</button>
+</div>
+<!-- 커플 에 생요점（couple) -->
+<div id="tab-couple" class="tab-content">
+  <div class="card">
+    <div class="section-title">💩 컨접 여성 👩지</div>
+    <div class="form-group">
+      <label>인할</label>
+      <input type="text" id="cpl-name1" placeholder="인할 여성" maxlength="10">
+    </div>
+    <div class="form-group">
+      <label>,0.4);
+  }
+  .tab-wrap {
+    display: flex;
+    background: rgba(255,255,255,0.8);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    padding: 4px;
+    box-shadow: var(--shadow);
+  }
+  .tab-wrap .tab {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .tab-wrap .tab.active {
+    color: var(--pink-dark);
+    border-bottom-color: var(--pink-dark);
+    font-weight: 600;
+  }
+
+  /* ===== 키� ===== */
+  .card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  /* ===== 이런 ===== */
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--pink-dark);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ===== 이유기 ===== */
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 6px;
+  }
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #FFD1E3;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus {
+    border-color: var(--pink-dark);
+  }
+
+  /* ===== 핓치 ===== */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--pink-dark), #FF6A95);
+    color: white;
+    box-shadow: 0 4px 20px rgba(255,133,161,0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(255,133,161,0.5);
+  }
+  .btn-kakao {
+    background: #FEE500;
+    color: #3C1E1E;
+    margin-top: 12px;
+  }
+
+  /* ===== 결제 高캼 ===== */
+  .pay-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .pay-overlay.show { display: flex; }
+  .pay-modal {
+    background: white;
+    border-radius: 24px;
+    padding: 32px 24px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+  }
+  .pay-title { font-size: 1.3rem; font-weight: 700; color: var(--pink-dark); margin-bottom: 12px; }
+  .pay-desc { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
+  .pay-price { font-size: 1.8rem; font-weight: 700; color: var(--pink-dark); margin-bottom: 20px; }
+
+  .wait-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+  }
+  .wait-overlay.show { display: flex; }
+  .wait-modal {
+    background: white;
+    border-radius: 24px;
+    padding: 32px 24px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ===== 럈가 ===== */
+  .result-section {
+    display: none;
+  }
+  .result-section.show { display: block; }
+
+  .score-box {
+    text-align: center;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .score-number {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    display: block;
+  }
+  .score-label { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 8px; }
+  .score-emoji { font-size: 2rem; margin-top: 12px; }
+
+  .detail-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .detail-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--pink-dark); margin-bottom: 10px; }
+  .detail-card p { color: var(--text-light); font-size: 0.9rrem; line-height: 1.7; }
+
+  /* ===== 섈톒 ===== */
+  .share-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .share-btn {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .share-btn.kakao { background: #FEE500; color: #3C1E1E; }
+  .share-btn.link { background: #F0F0FF; color: var(--text); }
+
+  /* ===== r으로 ===== */
+  @media (max-width: 480px) {
+    .container { padding: 0 12px; }
+    .score-number { font-size: 4rem; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+<header>
+  <span class="header-emoji">🌸</span>
+  <h1>𝌋𝌏𝋆𝌐𝌆‍𝌏𝌊𝌌𝘉𝌊𝌈𝘋𝌊</h1>
+  <p>이유한기늘에 다스 결제 풍근 동인는</p>
+  <div class="stars">☕몄☕몄☕몄☕몄☕몄</div>
+</header>
+<div class="container">
+
+<div class="tab-wrap">
+  <button class="tab active" onclick="switchTab('couple')">💩 couple 제다</button>
+  <button class="tab" onclick="switchTab('friend')">🐇 friend 제다</button>
+</div>
+<!-- 커플 에 생요점（couple) -->
+<div id="tab-couple" class="tab-content">
+  <div class="card">
+    <div class="section-title">💩 컨접 여성 👩지</div>
+    <div class="form-group">
+      <label>인할</label>
+      <input type="text" id="cpl-name1" placeholder="인할 여성" maxlength="10">
+    </div>
+    <div class="form-group">
+      <label>
