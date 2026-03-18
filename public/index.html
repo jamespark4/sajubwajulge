@@ -807,7 +807,7 @@ const PAYAPP_CONFIG = {
   goodname: '커플/우정 사주 결과 보기',
   price:    '1000',
   // Vercel 배포 후 실제 URL로 변경 (예: https://사주봐줄게.vercel.app)
-  VERCEL_URL: 'https://sajubwajulge-final22229-3206s-projects.vercel.app',
+  VERCEL_URL: 'https://sajubwajulge.vercel.app',
 };
 
 // 브라우저 세션 ID (결제 완료 추적용)
@@ -907,7 +907,7 @@ function startPolling() {
     // 2. Vercel API 폴링 (feedbackurl이 작동 중인 경우)
     try {
       const resp = await fetch(
-        PAYAPP_CONFIG.VERCEL_URL + '/api/check-payment?session=' + sessionId
+        PAYAPP_CONFIG.VERCEL_URL + '/api/payapp-webhook?session=' + sessionId
       );
       const data = await resp.json();
       if (data.paid) {
