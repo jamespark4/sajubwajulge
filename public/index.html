@@ -546,8 +546,8 @@
     <h2>결과를 확인해보세요!</h2>
     <p>분석이 완료됐어요.<br>결과를 보는 방법을 선택하세요 😊</p>
 
-    <div class="price-tag">990원</div>
-    <button class="btn-pay" onclick="simulatePay()">💳 990원 결제하고 보기</button>
+    <div class="price-tag">1000원</div>
+    <button class="btn-pay" onclick="simulatePay()">💳 1000원 결제하고 보기</button>
 
     <div class="divider">또는</div>
 
@@ -805,7 +805,7 @@ const PAYAPP_CONFIG = {
   userid:   'gpmkt327',   // ← 페이앱 판매자 아이디로 변경
   shopname: '사주봐줄게',
   goodname: '커플/우정 사주 결과 보기',
-  price:    '990',
+  price:    '1000',
   // Vercel 배포 후 실제 URL로 변경 (예: https://사주봐줄게.vercel.app)
   VERCEL_URL: 'https://sajubwajulge-final22229-3206s-projects.vercel.app',
 };
@@ -859,7 +859,7 @@ function showWaitingModal() {
       <div class="modal-emoji" id="waitEmoji">⏳</div>
       <h2 id="waitTitle">결제 확인 중...</h2>
       <p id="waitDesc" style="color:var(--text-light);font-size:0.9rem;line-height:1.7;margin-bottom:20px;">
-        결제창에서 990원 결제를 완료해주세요.<br>
+        결제창에서 1000원 결제를 완료해주세요.<br>
         <span style="color:#FF85A1;font-weight:600;">완료되면 자동으로 결과가 열려요 ✨</span>
       </p>
       <div style="margin-bottom:16px;">
@@ -1070,7 +1070,7 @@ function renderResult(unlocked) {
       <div class="blur-result">${fullHtml}</div>
       <div class="unlock-notice">
         <p>🔮 분석이 완료됐어요!<br>결과를 확인하려면 아래 방법 중 하나를 선택해주세요.</p>
-        <button class="btn-pay" onclick="showModal()">💳 990원 결제하고 보기</button>
+        <button class="btn-pay" onclick="showModal()">💳 1000원 결제하고 보기</button>
         <div class="or-text">또는</div>
         <button class="btn-kakao" onclick="kakaoShare()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#3C1E1E"><path d="M12 3C6.48 3 2 6.72 2 11.3c0 2.87 1.65 5.4 4.14 6.97l-1.04 3.8 4.35-2.86c.83.15 1.66.22 2.55.22 5.52 0 10-3.72 10-8.3C22 6.72 17.52 3 12 3z"/></svg>
