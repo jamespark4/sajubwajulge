@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌸 사주봐줄게 - 커플&우정 사주</title>
+<title>ð¸ ì¬ì£¼ë´ì¤ê² - ì»¤í&ì°ì  ì¬ì£¼</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
@@ -29,7 +29,7 @@
     color: var(--text);
   }
 
-  /* ===== 헤더 ===== */
+  /* ===== í¤ë ===== */
   header {
     text-align: center;
     padding: 40px 20px 20px;
@@ -42,7 +42,7 @@
 
   .stars { font-size: 18px; letter-spacing: 4px; margin-top: 8px; }
 
-  /* ===== 탭 ===== */
+  /* ===== í­ ===== */
   .tab-wrap {
     display: flex;
     justify-content: center;
@@ -69,13 +69,13 @@
     transform: translateY(-2px);
   }
 
-  /* ===== 메인 컨텐츠 ===== */
+  /* ===== ë©ì¸ ì»¨íì¸  ===== */
   .container { max-width: 600px; margin: 0 auto; padding: 20px; }
 
   .section { display: none; }
   .section.active { display: block; }
 
-  /* ===== 카드 ===== */
+  /* ===== ì¹´ë ===== */
   .card {
     background: var(--card-bg);
     border-radius: 24px;
@@ -95,7 +95,7 @@
     gap: 8px;
   }
 
-  /* ===== 폼 ===== */
+  /* ===== í¼ ===== */
   .form-row { margin-bottom: 14px; }
   .form-row label {
     display: block;
@@ -137,7 +137,7 @@
     background: linear-gradient(135deg, #85C1E9, #5B9BD5);
   }
 
-  /* ===== 버튼 ===== */
+  /* ===== ë²í¼ ===== */
   .btn-primary {
     width: 100%;
     padding: 16px;
@@ -190,7 +190,7 @@
   }
   .btn-pay:hover { background: var(--pink); }
 
-  /* ===== 결제 모달 ===== */
+  /* ===== ê²°ì  ëª¨ë¬ ===== */
   .overlay {
     display: none;
     position: fixed;
@@ -231,7 +231,7 @@
   }
   .btn-cancel { background: none; border: none; color: var(--text-light); font-size: 0.85rem; cursor: pointer; font-family: inherit; margin-top: 12px; }
 
-  /* ===== 결과 화면 ===== */
+  /* ===== ê²°ê³¼ íë©´ ===== */
   #result-section { display: none; }
   #result-section.show { display: block; }
 
@@ -313,10 +313,10 @@
   .unlock-notice p { color: var(--text); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.7; }
   .unlock-notice .or-text { color: var(--text-light); font-size: 0.85rem; margin: 12px 0; }
 
-  /* ===== 푸터 ===== */
+  /* ===== í¸í° ===== */
   footer { text-align: center; padding: 30px; color: var(--text-light); font-size: 0.8rem; line-height: 1.8; }
 
-  /* ===== 안내 배너 ===== */
+  /* ===== ìë´ ë°°ë ===== */
   .info-banner {
     background: linear-gradient(135deg, rgba(255,179,198,0.25), rgba(232,197,229,0.25));
     border-radius: 16px;
@@ -329,7 +329,7 @@
   }
   .info-banner strong { color: var(--pink-dark); }
 
-  /* ===== 반응형 ===== */
+  /* ===== ë°ìí ===== */
   @media (max-width: 420px) {
     header h1 { font-size: 1.6rem; }
     .form-2col { grid-template-columns: 1fr; }
@@ -338,254 +338,254 @@
 </head>
 <body>
 
-<!-- ========== 헤더 ========== -->
+<!-- ========== í¤ë ========== -->
 <header>
-  <span class="header-emoji">🌸</span>
-  <h1>사주봐줄게</h1>
-  <p>우리 사이, 별자리가 말해줄게</p>
-  <div class="stars">✨ ⭐ ✨</div>
+  <span class="header-emoji">ð¸</span>
+  <h1>ì¬ì£¼ë´ì¤ê²</h1>
+  <p>ì°ë¦¬ ì¬ì´, ë³ìë¦¬ê° ë§í´ì¤ê²</p>
+  <div class="stars">â¨ â­ â¨</div>
 </header>
 
-<!-- ========== 탭 ========== -->
+<!-- ========== í­ ========== -->
 <div class="tab-wrap">
-  <button class="tab-btn active" onclick="switchTab('couple')">💕 커플 사주</button>
-  <button class="tab-btn" onclick="switchTab('friend')">🫂 우정 사주</button>
+  <button class="tab-btn active" onclick="switchTab('couple')">ð ì»¤í ì¬ì£¼</button>
+  <button class="tab-btn" onclick="switchTab('friend')">ð« ì°ì  ì¬ì£¼</button>
 </div>
 
 <div class="container">
 
-  <!-- ========== 커플 탭 ========== -->
+  <!-- ========== ì»¤í í­ ========== -->
   <div id="tab-couple" class="section active">
     <div class="info-banner">
-      💡 두 사람의 생년월일시를 입력하면 <strong>궁합 점수</strong>와 <strong>운명적 연인 분석</strong>을 알려드려요!
+      ð¡ ë ì¬ëì ìëìì¼ìë¥¼ ìë ¥íë©´ <strong>ê¶í© ì ì</strong>ì <strong>ì´ëªì  ì°ì¸ ë¶ì</strong>ì ìë ¤ëë ¤ì!
     </div>
 
     <div class="card">
-      <h3>💝 첫 번째 사람</h3>
-      <div class="person-label">나 / A</div>
+      <h3>ð ì²« ë²ì§¸ ì¬ë</h3>
+      <div class="person-label">ë / A</div>
       <div class="form-row">
-        <label>이름 (별명도 OK)</label>
-        <input type="text" id="c-name1" placeholder="예) 지민이" maxlength="10">
+        <label>ì´ë¦ (ë³ëªë OK)</label>
+        <input type="text" id="c-name1" placeholder="ì) ì§ë¯¼ì´" maxlength="10">
       </div>
       <div class="form-2col">
         <div class="form-row">
-          <label>성별</label>
+          <label>ì±ë³</label>
           <select id="c-gender1">
-            <option value="여">여성 👩</option>
-            <option value="남">남성 👨</option>
+            <option value="ì¬">ì¬ì± ð©</option>
+            <option value="ë¨">ë¨ì± ð¨</option>
           </select>
         </div>
         <div class="form-row">
-          <label>태어난 시간</label>
+          <label>íì´ë ìê°</label>
           <select id="c-hour1">
-            <option value="모름">모름</option>
-            <option value="자시">자시(23~01시)</option>
-            <option value="축시">축시(01~03시)</option>
-            <option value="인시">인시(03~05시)</option>
-            <option value="묘시">묘시(05~07시)</option>
-            <option value="진시">진시(07~09시)</option>
-            <option value="사시">사시(09~11시)</option>
-            <option value="오시">오시(11~13시)</option>
-            <option value="미시">미시(13~15시)</option>
-            <option value="신시">신시(15~17시)</option>
-            <option value="유시">유시(17~19시)</option>
-            <option value="술시">술시(19~21시)</option>
-            <option value="해시">해시(21~23시)</option>
+            <option value="ëª¨ë¦">ëª¨ë¦</option>
+            <option value="ìì">ìì(23~01ì)</option>
+            <option value="ì¶ì">ì¶ì(01~03ì)</option>
+            <option value="ì¸ì">ì¸ì(03~05ì)</option>
+            <option value="ë¬ì">ë¬ì(05~07ì)</option>
+            <option value="ì§ì">ì§ì(07~09ì)</option>
+            <option value="ì¬ì">ì¬ì(09~11ì)</option>
+            <option value="ì¤ì">ì¤ì(11~13ì)</option>
+            <option value="ë¯¸ì">ë¯¸ì(13~15ì)</option>
+            <option value="ì ì">ì ì(15~17ì)</option>
+            <option value="ì ì">ì ì(17~19ì)</option>
+            <option value="ì ì">ì ì(19~21ì)</option>
+            <option value="í´ì">í´ì(21~23ì)</option>
           </select>
         </div>
       </div>
       <div class="form-row">
-        <label>생년월일</label>
+        <label>ìëìì¼</label>
         <input type="date" id="c-birth1" min="1950-01-01" max="2010-12-31">
       </div>
     </div>
 
     <div class="card">
-      <h3>💝 두 번째 사람</h3>
-      <div class="person-label blue">상대방 / B</div>
+      <h3>ð ë ë²ì§¸ ì¬ë</h3>
+      <div class="person-label blue">ìëë°© / B</div>
       <div class="form-row">
-        <label>이름 (별명도 OK)</label>
-        <input type="text" id="c-name2" placeholder="예) 준호" maxlength="10">
+        <label>ì´ë¦ (ë³ëªë OK)</label>
+        <input type="text" id="c-name2" placeholder="ì) ì¤í¸" maxlength="10">
       </div>
       <div class="form-2col">
         <div class="form-row">
-          <label>성별</label>
+          <label>ì±ë³</label>
           <select id="c-gender2">
-            <option value="남">남성 👨</option>
-            <option value="여">여성 👩</option>
+            <option value="ë¨">ë¨ì± ð¨</option>
+            <option value="ì¬">ì¬ì± ð©</option>
           </select>
         </div>
         <div class="form-row">
-          <label>태어난 시간</label>
+          <label>íì´ë ìê°</label>
           <select id="c-hour2">
-            <option value="모름">모름</option>
-            <option value="자시">자시(23~01시)</option>
-            <option value="축시">축시(01~03시)</option>
-            <option value="인시">인시(03~05시)</option>
-            <option value="묘시">묘시(05~07시)</option>
-            <option value="진시">진시(07~09시)</option>
-            <option value="사시">사시(09~11시)</option>
-            <option value="오시">오시(11~13시)</option>
-            <option value="미시">미시(13~15시)</option>
-            <option value="신시">신시(15~17시)</option>
-            <option value="유시">유시(17~19시)</option>
-            <option value="술시">술시(17~19시)</option>
-            <option value="해시">해시(21~23시)</option>
+            <option value="ëª¨ë¦">ëª¨ë¦</option>
+            <option value="ìì">ìì(23~01ì)</option>
+            <option value="ì¶ì">ì¶ì(01~03ì)</option>
+            <option value="ì¸ì">ì¸ì(03~05ì)</option>
+            <option value="ë¬ì">ë¬ì(05~07ì)</option>
+            <option value="ì§ì">ì§ì(07~09ì)</option>
+            <option value="ì¬ì">ì¬ì(09~11ì)</option>
+            <option value="ì¤ì">ì¤ì(11~13ì)</option>
+            <option value="ë¯¸ì">ë¯¸ì(13~15ì)</option>
+            <option value="ì ì">ì ì(15~17ì)</option>
+            <option value="ì ì">ì ì(17~19ì)</option>
+            <option value="ì ì">ì ì(17~19ì)</option>
+            <option value="í´ì">í´ì(21~23ì)</option>
           </select>
         </div>
       </div>
       <div class="form-row">
-        <label>생년월일</label>
+        <label>ìëìì¼</label>
         <input type="date" id="c-birth2" min="1950-01-01" max="2010-12-31">
       </div>
     </div>
 
-    <button class="btn-primary" onclick="analyzeCouple()">💕 궁합 분석하기</button>
+    <button class="btn-primary" onclick="analyzeCouple()">ð ê¶í© ë¶ìíê¸°</button>
   </div>
 
-  <!-- ========== 우정 탭 ========== -->
+  <!-- ========== ì°ì  í­ ========== -->
   <div id="tab-friend" class="section">
     <div class="info-banner">
-      💡 두 사람의 생년월일시를 입력하면 <strong>우정 지수</strong>와 <strong>찐친 케미 분석</strong>을 알려드려요!
+      ð¡ ë ì¬ëì ìëìì¼ìë¥¼ ìë ¥íë©´ <strong>ì°ì  ì§ì</strong>ì <strong>ì°ì¹ ì¼ë¯¸ ë¶ì</strong>ì ìë ¤ëë ¤ì!
     </div>
 
     <div class="card">
-      <h3>🌟 첫 번째 친구</h3>
-      <div class="person-label">나</div>
+      <h3>ð ì²« ë²ì§¸ ì¹êµ¬</h3>
+      <div class="person-label">ë</div>
       <div class="form-row">
-        <label>이름 (별명도 OK)</label>
-        <input type="text" id="f-name1" placeholder="예) 소연이" maxlength="10">
+        <label>ì´ë¦ (ë³ëªë OK)</label>
+        <input type="text" id="f-name1" placeholder="ì) ìì°ì´" maxlength="10">
       </div>
       <div class="form-2col">
         <div class="form-row">
-          <label>성별</label>
+          <label>ì±ë³</label>
           <select id="f-gender1">
-            <option value="여">여성 👩</option>
-            <option value="남">남성 👨</option>
+            <option value="ì¬">ì¬ì± ð©</option>
+            <option value="ë¨">ë¨ì± ð¨</option>
           </select>
         </div>
         <div class="form-row">
-          <label>태어난 시간</label>
+          <label>íì´ë ìê°</label>
           <select id="f-hour1">
-            <option value="모름">모름</option>
-            <option value="자시">자시(23~01시)</option>
-            <option value="축시">축시(01~03시)</option>
-            <option value="인시">인시(03~05시)</option>
-            <option value="묘시">묘시(05~07시)</option>
-            <option value="진시">진시(07~09시)</option>
-            <option value="사시">사시(09~11시)</option>
-            <option value="오시">오시(11~13시)</option>
-            <option value="미시">미시(13~15시)</option>
-            <option value="신시">신시(15~17시)</option>
-            <option value="유시">유시(17~19시)</option>
-            <option value="술시">술시(19~21시)</option>
-            <option value="해시">해시(21~23시)</option>
+            <option value="ëª¨ë¦">ëª¨ë¦</option>
+            <option value="ìì">ìì(23~01ì)</option>
+            <option value="ì¶ì">ì¶ì(01~03ì)</option>
+            <option value="ì¸ì">ì¸ì(03~05ì)</option>
+            <option value="ë¬ì">ë¬ì(05~07ì)</option>
+            <option value="ì§ì">ì§ì(07~09ì)</option>
+            <option value="ì¬ì">ì¬ì(09~11ì)</option>
+            <option value="ì¤ì">ì¤ì(11~13ì)</option>
+            <option value="ë¯¸ì">ë¯¸ì(13~15ì)</option>
+            <option value="ì ì">ì ì(15~17ì)</option>
+            <option value="ì ì">ì ì(17~19ì)</option>
+            <option value="ì ì">ì ì(19~21ì)</option>
+            <option value="í´ì">í´ì(21~23ì)</option>
           </select>
         </div>
       </div>
       <div class="form-row">
-        <label>생년월일</label>
+        <label>ìëìì¼</label>
         <input type="date" id="f-birth1" min="1950-01-01" max="2010-12-31">
       </div>
     </div>
 
     <div class="card">
-      <h3>🌟 두 번째 친구</h3>
-      <div class="person-label blue">친구</div>
+      <h3>ð ë ë²ì§¸ ì¹êµ¬</h3>
+      <div class="person-label blue">ì¹êµ¬</div>
       <div class="form-row">
-        <label>이름 (별명도 OK)</label>
-        <input type="text" id="f-name2" placeholder="예) 하은이" maxlength="10">
+        <label>ì´ë¦ (ë³ëªë OK)</label>
+        <input type="text" id="f-name2" placeholder="ì) íìì´" maxlength="10">
       </div>
       <div class="form-2col">
         <div class="form-row">
-          <label>성별</label>
+          <label>ì±ë³</label>
           <select id="f-gender2">
-            <option value="여">여성 👩</option>
-            <option value="남">남성 👨</option>
+            <option value="ì¬">ì¬ì± ð©</option>
+            <option value="ë¨">ë¨ì± ð¨</option>
           </select>
         </div>
         <div class="form-row">
-          <label>태어난 시간</label>
+          <label>íì´ë ìê°</label>
           <select id="f-hour2">
-            <option value="모름">모름</option>
-            <option value="자시">자시(23~01시)</option>
-            <option value="축시">축시(01~03시)</option>
-            <option value="인시">인시(03~05시)</option>
-            <option value="묘시">묘시(05~07시)</option>
-            <option value="진시">진시(07~09시)</option>
-            <option value="사시">사시(09~11시)</option>
-            <option value="오시">오시(11~13시)</option>
-            <option value="미시">미시(13~15시)</option>
-            <option value="신시">신시(15~17시)</option>
-            <option value="유시">유시(17~19시)</option>
-            <option value="술시">술시(19~21시)</option>
-            <option value="해시">해시(21~23시)</option>
+            <option value="ëª¨ë¦">ëª¨ë¦</option>
+            <option value="ìì">ìì(23~01ì)</option>
+            <option value="ì¶ì">ì¶ì(01~03ì)</option>
+            <option value="ì¸ì">ì¸ì(03~05ì)</option>
+            <option value="ë¬ì">ë¬ì(05~07ì)</option>
+            <option value="ì§ì">ì§ì(07~09ì)</option>
+            <option value="ì¬ì">ì¬ì(09~11ì)</option>
+            <option value="ì¤ì">ì¤ì(11~13ì)</option>
+            <option value="ë¯¸ì">ë¯¸ì(13~15ì)</option>
+            <option value="ì ì">ì ì(15~17ì)</option>
+            <option value="ì ì">ì ì(17~19ì)</option>
+            <option value="ì ì">ì ì(19~21ì)</option>
+            <option value="í´ì">í´ì(21~23ì)</option>
           </select>
         </div>
       </div>
       <div class="form-row">
-        <label>생년월일</label>
+        <label>ìëìì¼</label>
         <input type="date" id="f-birth2" min="1950-01-01" max="2010-12-31">
       </div>
     </div>
 
-    <button class="btn-primary" style="background: linear-gradient(135deg, #A29BFE, #6C5CE7);" onclick="analyzeFriend()">🫂 우정 분석하기</button>
+    <button class="btn-primary" style="background: linear-gradient(135deg, #A29BFE, #6C5CE7);" onclick="analyzeFriend()">ð« ì°ì  ë¶ìíê¸°</button>
   </div>
 
-  <!-- ========== 결과 ========== -->
+  <!-- ========== ê²°ê³¼ ========== -->
   <div id="result-section">
     <div id="result-content"></div>
   </div>
 
 </div><!-- /container -->
 
-<!-- ========== 결제 모달 ========== -->
+<!-- ========== ê²°ì  ëª¨ë¬ ========== -->
 <div class="overlay" id="payOverlay">
   <div class="modal">
-    <div class="modal-emoji">🔮</div>
-    <h2>결과를 확인해보세요!</h2>
-    <p>분석이 완료됐어요.<br>결과를 보는 방법을 선택하세요 😊</p>
+    <div class="modal-emoji">ð®</div>
+    <h2>ê²°ê³¼ë¥¼ íì¸í´ë³´ì¸ì!</h2>
+    <p>ë¶ìì´ ìë£ëì´ì.<br>ê²°ê³¼ë¥¼ ë³´ë ë°©ë²ì ì ííì¸ì ð</p>
 
-    <div class="price-tag">1000원</div>
-    <button class="btn-pay" onclick="simulatePay()">💳 1000원 결제하고 보기</button>
+    <div class="price-tag">1000ì</div>
+    <button class="btn-pay" onclick="simulatePay()">ð³ 1000ì ê²°ì íê³  ë³´ê¸°</button>
 
-    <div class="divider">또는</div>
+    <div class="divider">ëë</div>
 
     <button class="btn-kakao" onclick="kakaoShare()">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="#3C1E1E"><path d="M12 3C6.48 3 2 6.72 2 11.3c0 2.87 1.65 5.4 4.14 6.97l-1.04 3.8 4.35-2.86c.83.15 1.66.22 2.55.22 5.52 0 10-3.72 10-8.3C22 6.72 17.52 3 12 3z"/></svg>
-      카카오톡 공유하고 무료로 보기
+      ì¹´ì¹´ì¤í¡ ê³µì íê³  ë¬´ë£ë¡ ë³´ê¸°
     </button>
 
-    <button class="btn-cancel" onclick="closeModal()">✕ 닫기</button>
+    <button class="btn-cancel" onclick="closeModal()">â ë«ê¸°</button>
   </div>
 </div>
 
-<!-- ========== 푸터 ========== -->
+<!-- ========== í¸í° ========== -->
 <footer>
-  🌸 사주봐줄게<br>
-  본 서비스는 재미로 즐기는 운세 콘텐츠입니다.<br>
-  실제 사주 명리와는 차이가 있을 수 있어요 ✨
+  ð¸ ì¬ì£¼ë´ì¤ê²<br>
+  ë³¸ ìë¹ì¤ë ì¬ë¯¸ë¡ ì¦ê¸°ë ì´ì¸ ì½íì¸ ìëë¤.<br>
+  ì¤ì  ì¬ì£¼ ëªë¦¬ìë ì°¨ì´ê° ìì ì ìì´ì â¨
 </footer>
 
-<!-- 페이앱 JS SDK -->
+<!-- íì´ì± JS SDK -->
 <script src="https://lite.payapp.kr/public/api/v2/payapp-lite.js"></script>
 
 <script>
 // =====================================================
-//  데이터 & 로직
+//  ë°ì´í° & ë¡ì§
 // =====================================================
 
-// 오행 (간지 기반 간략화)
+// ì¤í (ê°ì§ ê¸°ë° ê°ëµí)
 const ELEMENTS = {
-  갑: '목', 을: '목', 병: '화', 정: '화',
-  무: '토', 기: '토', 경: '금', 신: '금',
-  임: '수', 계: '수'
+  ê°: 'ëª©', ì: 'ëª©', ë³: 'í', ì : 'í',
+  ë¬´: 'í ', ê¸°: 'í ', ê²½: 'ê¸', ì : 'ê¸',
+  ì: 'ì', ê³: 'ì'
 };
 
-const HEAVENLY = ['갑','을','병','정','무','기','경','신','임','계'];
-const EARTHLY   = ['자','축','인','묘','진','사','오','미','신','유','술','해'];
-const ZODIAC_KO = ['쥐','소','호랑이','토끼','용','뱀','말','양','원숭이','닭','개','돼지'];
-const ZODIAC_EMOJI = ['🐭','🐮','🐯','🐰','🐲','🐍','🐴','🐑','🐵','🐓','🐶','🐷'];
+const HEAVENLY = ['ê°','ì','ë³','ì ','ë¬´','ê¸°','ê²½','ì ','ì','ê³'];
+const EARTHLY   = ['ì','ì¶','ì¸','ë¬','ì§','ì¬','ì¤','ë¯¸','ì ','ì ','ì ','í´'];
+const ZODIAC_KO = ['ì¥','ì','í¸ëì´','í ë¼','ì©','ë±','ë§','ì','ìì­ì´','ë­','ê°','ë¼ì§'];
+const ZODIAC_EMOJI = ['ð­','ð®','ð¯','ð°','ð²','ð','ð´','ð','ðµ','ð','ð¶','ð·'];
 
 function getGanzhi(year) {
   const h = HEAVENLY[(year - 4) % 10];
@@ -593,25 +593,25 @@ function getGanzhi(year) {
   return { h, e, elem: ELEMENTS[h], zodiac: ZODIAC_KO[(year - 4) % 12], emoji: ZODIAC_EMOJI[(year - 4) % 12] };
 }
 
-// 오행 궁합 점수 테이블
+// ì¤í ê¶í© ì ì íì´ë¸
 const ELEM_COMPAT = {
-  목: { 목: 70, 화: 90, 토: 50, 금: 40, 수: 85 },
-  화: { 목: 90, 화: 65, 토: 85, 금: 55, 수: 45 },
-  토: { 목: 50, 화: 85, 토: 70, 금: 80, 수: 55 },
-  금: { 목: 40, 화: 55, 토: 80, 금: 65, 수: 90 },
-  수: { 목: 85, 화: 45, 토: 55, 금: 90, 수: 70 }
+  ëª©: { ëª©: 70, í: 90, í : 50, ê¸: 40, ì: 85 },
+  í: { ëª©: 90, í: 65, í : 85, ê¸: 55, ì: 45 },
+  í : { ëª©: 50, í: 85, í : 70, ê¸: 80, ì: 55 },
+  ê¸: { ëª©: 40, í: 55, í : 80, ê¸: 65, ì: 90 },
+  ì: { ëª©: 85, í: 45, í : 55, ê¸: 90, ì: 70 }
 };
 
-// 띠 궁합 추가 보정 (삼합/방합/충)
+// ë  ê¶í© ì¶ê° ë³´ì  (ì¼í©/ë°©í©/ì¶©)
 const ZODIAC_BONUS = {
-  '쥐+용': 10, '용+쥐': 10, '쥐+원숭이': 10, '원숭이+쥐': 10,
-  '소+뱀': 10, '뱀+소': 10, '소+닭': 10, '닭+소': 10,
-  '호랑이+말': 10, '말+호랑이': 10, '호랑이+개': 10, '개+호랑이': 10,
-  '토끼+양': 10, '양+토끼': 10, '토끼+돼지': 10, '돼지+토끼': 10,
-  // 충 (불화)
-  '쥐+말': -15, '말+쥐': -15, '소+양': -12, '양+소': -12,
-  '호랑이+원숭이': -12, '원숭이+호랑이': -12, '토끼+닭': -12, '닭+토끼': -12,
-  '용+개': -10, '개+용': -10, '뱀+돼지': -10, '돼지+뱀': -10
+  'ì¥+ì©': 10, 'ì©+ì¥': 10, 'ì¥+ìì­ì´': 10, 'ìì­ì´+ì¥': 10,
+  'ì+ë±': 10, 'ë±+ì': 10, 'ì+ë­': 10, 'ë­+ì': 10,
+  'í¸ëì´+ë§': 10, 'ë§+í¸ëì´': 10, 'í¸ëì´+ê°': 10, 'ê°+í¸ëì´': 10,
+  'í ë¼+ì': 10, 'ì+í ë¼': 10, 'í ë¼+ë¼ì§': 10, 'ë¼ì§+í ë¼': 10,
+  // ì¶© (ë¶í)
+  'ì¥+ë§': -15, 'ë§+ì¥': -15, 'ì+ì': -12, 'ì+ì': -12,
+  'í¸ëì´+ìì­ì´': -12, 'ìì­ì´+í¸ëì´': -12, 'í ë¼+ë­': -12, 'ë­+í ë¼': -12,
+  'ì©+ê°': -10, 'ê°+ì©': -10, 'ë±+ë¼ì§': -10, 'ë¼ì§+ë±': -10
 };
 
 function calcScore(gz1, gz2) {
@@ -621,31 +621,31 @@ function calcScore(gz1, gz2) {
   return Math.max(30, Math.min(99, base));
 }
 
-// 커플 결과 텍스트 생성
+// ì»¤í ê²°ê³¼ íì¤í¸ ìì±
 const coupleTexts = [
-  { min: 85, label: '운명의 상대 💕', emoji: '💞',
-    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}띠 ${gz1.elem}의 기운)과 ${n2}(${gz2.zodiac}띠 ${gz2.elem}의 기운)은 오행상 최고의 조화를 이룹니다. 서로의 부족한 부분을 채워주며 에너지가 자연스럽게 흐르는 관계예요. 만남 자체가 운명적이며, 함께 있을수록 두 사람 모두 성장합니다.`,
-    money: (n1,n2) => `두 사람이 힘을 합치면 금전 운이 배가 됩니다. ${n1}의 계획성과 ${n2}의 실행력이 만나 재물을 함께 불려나갈 수 있어요. 공동 목표를 세워보세요!`,
-    warning: () => `완벽한 궁합도 노력이 필요해요. 가끔은 각자의 시간을 갖고 개인의 꿈도 응원해주세요. 너무 의지하다 보면 성장이 멈출 수 있답니다.`,
-    tip: (n1,n2) => `💌 함께 여행을 가거나, 새로운 취미를 같이 시작해보세요. 두 사람의 인연은 도전할수록 더 깊어진답니다! ${n1}과 ${n2}, 응원해요 🌟`
+  { min: 85, label: 'ì´ëªì ìë ð', emoji: 'ð',
+    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}ë  ${gz1.elem}ì ê¸°ì´)ê³¼ ${n2}(${gz2.zodiac}ë  ${gz2.elem}ì ê¸°ì´)ì ì¤íì ìµê³ ì ì¡°íë¥¼ ì´ë£¹ëë¤. ìë¡ì ë¶ì¡±í ë¶ë¶ì ì±ìì£¼ë©° ìëì§ê° ìì°ì¤ë½ê² íë¥´ë ê´ê³ìì. ë§ë¨ ìì²´ê° ì´ëªì ì´ë©°, í¨ê» ìììë¡ ë ì¬ë ëª¨ë ì±ì¥í©ëë¤.`,
+    money: (n1,n2) => `ë ì¬ëì´ íì í©ì¹ë©´ ê¸ì  ì´ì´ ë°°ê° ë©ëë¤. ${n1}ì ê³íì±ê³¼ ${n2}ì ì¤íë ¥ì´ ë§ë ì¬ë¬¼ì í¨ê» ë¶ë ¤ëê° ì ìì´ì. ê³µë ëª©íë¥¼ ì¸ìë³´ì¸ì!`,
+    warning: () => `ìë²½í ê¶í©ë ë¸ë ¥ì´ íìí´ì. ê°ëì ê°ìì ìê°ì ê°ê³  ê°ì¸ì ê¿ë ììí´ì£¼ì¸ì. ëë¬´ ìì§íë¤ ë³´ë©´ ì±ì¥ì´ ë©ì¶ ì ìëµëë¤.`,
+    tip: (n1,n2) => `ð í¨ê» ì¬íì ê°ê±°ë, ìë¡ì´ ì·¨ë¯¸ë¥¼ ê°ì´ ììí´ë³´ì¸ì. ë ì¬ëì ì¸ì°ì ëì í ìë¡ ë ê¹ì´ì§ëµëë¤! ${n1}ê³¼ ${n2}, ììí´ì ð`
   },
-  { min: 70, label: '잘 어울리는 사이 💗', emoji: '💝',
-    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}띠)과 ${n2}(${gz2.zodiac}띠)은 서로 잘 이해하고 편안함을 주는 관계입니다. 처음에는 서로 다른 점이 눈에 띄지만, 시간이 갈수록 더 좋아지는 타입이에요. 오래 함께할수록 진가가 드러나는 인연이랍니다.`,
-    money: (n1,n2) => `각자의 재정 스타일이 조금 달라요. 한 명은 저축형, 한 명은 투자형일 수 있으니 서로의 방식을 존중하고 큰 지출은 함께 상의하세요.`,
-    warning: (n1) => `${n1}쪽이 감정을 혼자 삭이는 경향이 있을 수 있어요. 작은 감정도 솔직하게 나눠주세요. 쌓이면 큰 오해가 될 수 있답니다.`,
-    tip: (n1,n2) => `💌 서로에게 "오늘 어땠어?" 한 마디씩 건네는 습관을 만들어보세요. ${n1}과 ${n2}의 케미는 대화할수록 빛난답니다 ✨`
+  { min: 70, label: 'ì ì´ì¸ë¦¬ë ì¬ì´ ð', emoji: 'ð',
+    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}ë )ê³¼ ${n2}(${gz2.zodiac}ë )ì ìë¡ ì ì´í´íê³  í¸ìí¨ì ì£¼ë ê´ê³ìëë¤. ì²ììë ìë¡ ë¤ë¥¸ ì ì´ ëì ëì§ë§, ìê°ì´ ê°ìë¡ ë ì¢ìì§ë íìì´ìì. ì¤ë í¨ê»í ìë¡ ì§ê°ê° ëë¬ëë ì¸ì°ì´ëëë¤.`,
+    money: (n1,n2) => `ê°ìì ì¬ì  ì¤íì¼ì´ ì¡°ê¸ ë¬ë¼ì. í ëªì ì ì¶í, í ëªì í¬ìíì¼ ì ìì¼ë ìë¡ì ë°©ìì ì¡´ì¤íê³  í° ì§ì¶ì í¨ê» ììíì¸ì.`,
+    warning: (n1) => `${n1}ìª½ì´ ê°ì ì í¼ì ì­ì´ë ê²½í¥ì´ ìì ì ìì´ì. ìì ê°ì ë ìì§íê² ëë ì£¼ì¸ì. ìì´ë©´ í° ì¤í´ê° ë  ì ìëµëë¤.`,
+    tip: (n1,n2) => `ð ìë¡ìê² "ì¤ë ì´ë ì´?" í ë§ëì© ê±´ë¤ë ìµê´ì ë§ë¤ì´ë³´ì¸ì. ${n1}ê³¼ ${n2}ì ì¼ë¯¸ë ëíí ìë¡ ë¹ëëµëë¤ â¨`
   },
-  { min: 55, label: '노력이 필요한 인연 🌱', emoji: '🌸',
-    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}띠 ${gz1.elem})과 ${n2}(${gz2.zodiac}띠 ${gz2.elem})은 오행상 서로 긴장감을 주는 관계예요. 처음엔 어색하거나 의견 충돌이 생길 수 있지만, 이 긴장감이 오히려 서로를 더 단단하게 만들어줘요. 노력하는 만큼 성장하는 커플입니다!`,
-    money: (n1,n2) => `금전 관련해서는 투명하게 공유하는 게 중요해요. 서로 기대치가 다를 수 있으니 작은 것부터 솔직하게 이야기해보세요.`,
-    warning: (n1,n2) => `자존심 싸움을 주의하세요! ${n1}과 ${n2} 모두 져주는 것이 지는 게 아니라는 걸 기억해요. 먼저 손 내밀 용기가 관계를 살린답니다.`,
-    tip: (n1,n2) => `💌 서로의 장점을 소리 내어 칭찬해주는 시간을 가져보세요. 긴장감이 설렘으로 바뀌는 마법 같은 순간이 찾아올 거예요 🌈`
+  { min: 55, label: 'ë¸ë ¥ì´ íìí ì¸ì° ð±', emoji: 'ð¸',
+    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}ë  ${gz1.elem})ê³¼ ${n2}(${gz2.zodiac}ë  ${gz2.elem})ì ì¤íì ìë¡ ê¸´ì¥ê°ì ì£¼ë ê´ê³ìì. ì²ìì ì´ìíê±°ë ìê²¬ ì¶©ëì´ ìê¸¸ ì ìì§ë§, ì´ ê¸´ì¥ê°ì´ ì¤íë ¤ ìë¡ë¥¼ ë ë¨ë¨íê² ë§ë¤ì´ì¤ì. ë¸ë ¥íë ë§í¼ ì±ì¥íë ì»¤íìëë¤!`,
+    money: (n1,n2) => `ê¸ì  ê´ë ¨í´ìë í¬ëªíê² ê³µì íë ê² ì¤ìí´ì. ìë¡ ê¸°ëì¹ê° ë¤ë¥¼ ì ìì¼ë ìì ê²ë¶í° ìì§íê² ì´ì¼ê¸°í´ë³´ì¸ì.`,
+    warning: (n1,n2) => `ìì¡´ì¬ ì¸ìì ì£¼ìíì¸ì! ${n1}ê³¼ ${n2} ëª¨ë ì ¸ì£¼ë ê²ì´ ì§ë ê² ìëë¼ë ê±¸ ê¸°ìµí´ì. ë¨¼ì  ì ë´ë° ì©ê¸°ê° ê´ê³ë¥¼ ì´ë¦°ëµëë¤.`,
+    tip: (n1,n2) => `ð ìë¡ì ì¥ì ì ìë¦¬ ë´ì´ ì¹­ì°¬í´ì£¼ë ìê°ì ê°ì ¸ë³´ì¸ì. ê¸´ì¥ê°ì´ ì¤ë ì¼ë¡ ë°ëë ë§ë² ê°ì ìê°ì´ ì°¾ìì¬ ê±°ìì ð`
   },
-  { min: 0, label: '도전적인 인연 🔥', emoji: '💫',
-    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}띠)과 ${n2}(${gz2.zodiac}띠)은 겉으로 보면 정반대 같지만, 그래서 더 강렬하게 끌리는 인연이에요. 서로를 완전히 이해하기까지 시간이 필요하지만, 그 과정에서 두 사람 모두 크게 성장한답니다. 어려운 만큼 더 특별한 사랑이에요.`,
-    money: (n1,n2) => `경제적 가치관이 많이 달라요. 함께라면 한 명이 쓰고 싶을 때 다른 한 명은 아끼고 싶을 수 있어요. 공동 통장을 따로 만드는 것도 방법이에요!`,
-    warning: (n1,n2) => `감정이 격해질 때는 잠깐 진정하는 시간을 갖는 게 중요해요. ${n1}과 ${n2}, 싸울 때 상처가 되는 말은 꼭 삼가주세요.`,
-    tip: (n1,n2) => `💌 두 사람에게 필요한 것: 작은 약속 하나씩 지켜나가기. 신뢰는 큰 사건이 아니라 사소한 일들이 쌓여 만들어진답니다 🌷`
+  { min: 0, label: 'ëì ì ì¸ ì¸ì° ð¥', emoji: 'ð«',
+    love: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}ë )ê³¼ ${n2}(${gz2.zodiac}ë )ì ê²ì¼ë¡ ë³´ë©´ ì ë°ë ê°ì§ë§, ê·¸ëì ë ê°ë ¬íê² ëë¦¬ë ì¸ì°ì´ìì. ìë¡ë¥¼ ìì í ì´í´íê¸°ê¹ì§ ìê°ì´ íìíì§ë§, ê·¸ ê³¼ì ìì ë ì¬ë ëª¨ë í¬ê² ì±ì¥íëµëë¤. ì´ë ¤ì´ ë§í¼ ë í¹ë³í ì¬ëì´ìì.`,
+    money: (n1,n2) => `ê²½ì ì  ê°ì¹ê´ì´ ë§ì´ ë¬ë¼ì. í¨ê»ë¼ë©´ í ëªì´ ì°ê³  ì¶ì ë ë¤ë¥¸ í ëªì ìë¼ê³  ì¶ì ì ìì´ì. ê³µë íµì¥ì ë°ë¡ ë§ëë ê²ë ë°©ë²ì´ìì!`,
+    warning: (n1,n2) => `ê°ì ì´ ê²©í´ì§ ëë ì ê¹ ì§ì íë ìê°ì ê°ë ê² ì¤ìí´ì. ${n1}ê³¼ ${n2}, ì¸ì¸ ë ìì²ê° ëë ë§ì ê¼­ ì¼ê°ì£¼ì¸ì.`,
+    tip: (n1,n2) => `ð ë ì¬ëìê² íìí ê²: ìì ì½ì íëì© ì§ì¼ëê°ê¸°. ì ë¢°ë í° ì¬ê±´ì´ ìëë¼ ì¬ìí ì¼ë¤ì´ ìì¬ ë§ë¤ì´ì§ëµëë¤ ð·`
   }
 ];
 
@@ -653,31 +653,31 @@ function getCoupleText(score) {
   return coupleTexts.find(t => score >= t.min);
 }
 
-// 우정 텍스트 생성
+// ì°ì  íì¤í¸ ìì±
 const friendTexts = [
-  { min: 85, label: '천생연분 찐친 🫂', emoji: '👯',
-    bond: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}띠)과 ${n2}(${gz2.zodiac}띠)은 전생에도 함께였을 것 같은 찐찐친 케미를 자랑해요! 에너지가 서로 통해서 말하지 않아도 마음을 알아차리고, 함께 있으면 시간 가는 줄 모른답니다. 이런 친구는 평생 옆에 둬야 해요!`,
-    trouble: (n1,n2) => `가끔은 너무 비슷해서 생기는 다툼이 있을 수 있어요. 서로 같은 걸 원할 때 양보가 어려울 수 있지만, 이미 깊은 신뢰가 있기 때문에 금방 화해하게 됩니다.`,
-    activity: (n1,n2) => `🎉 함께하면 좋은 것: 즉흥 여행, 새벽 감성 드라이브, 서로의 고민 털어놓기. ${n1}과 ${n2}는 함께라면 어디서든 빛나요!`,
-    tip: () => `이 우정, 꼭 오래 이어가세요. 사진도 많이 찍고, 기념일도 챙겨주세요. 소중한 사람이라는 걸 꼭 표현해주세요 💌`
+  { min: 85, label: 'ì²ìì°ë¶ ì°ì¹ ð«', emoji: 'ð¯',
+    bond: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}ë )ê³¼ ${n2}(${gz2.zodiac}ë )ì ì ììë í¨ê»ìì ê² ê°ì ì°ì°ì¹ ì¼ë¯¸ë¥¼ ìëí´ì! ìëì§ê° ìë¡ íµí´ì ë§íì§ ììë ë§ìì ììì°¨ë¦¬ê³ , í¨ê» ìì¼ë©´ ìê° ê°ë ì¤ ëª¨ë¥¸ëµëë¤. ì´ë° ì¹êµ¬ë íì ìì ë¬ì¼ í´ì!`,
+    trouble: (n1,n2) => `ê°ëì ëë¬´ ë¹ì·í´ì ìê¸°ë ë¤í¼ì´ ìì ì ìì´ì. ìë¡ ê°ì ê±¸ ìí  ë ìë³´ê° ì´ë ¤ì¸ ì ìì§ë§, ì´ë¯¸ ê¹ì ì ë¢°ê° ìê¸° ëë¬¸ì ê¸ë°© íí´íê² ë©ëë¤.`,
+    activity: (n1,n2) => `ð í¨ê»íë©´ ì¢ì ê²: ì¦í¥ ì¬í, ìë²½ ê°ì± ëë¼ì´ë¸, ìë¡ì ê³ ë¯¼ í¸ì´ëê¸°. ${n1}ê³¼ ${n2}ë í¨ê»ë¼ë©´ ì´ëìë  ë¹ëì!`,
+    tip: () => `ì´ ì°ì , ê¼­ ì¤ë ì´ì´ê°ì¸ì. ì¬ì§ë ë§ì´ ì°ê³ , ê¸°ëì¼ë ì±ê²¨ì£¼ì¸ì. ìì¤í ì¬ëì´ë¼ë ê±¸ ê¼­ ííí´ì£¼ì¸ì ð`
   },
-  { min: 70, label: '믿음직한 친구 🌟', emoji: '✨',
-    bond: (n1,n2,gz1,gz2) => `${n1}과 ${n2}는 서로에게 든든한 버팀목이 되어주는 사이예요. 성향은 조금 다를 수 있지만, 그 다름이 오히려 서로를 보완해줘요. 힘든 일이 생기면 가장 먼저 생각나는 친구가 될 거예요.`,
-    trouble: (n1,n2) => `취향이나 관심사가 달라 가끔 공통 화제 찾기가 어려울 수 있어요. 하지만 서로의 세계를 조금씩 공유하면 더 풍성한 우정이 만들어진답니다.`,
-    activity: (n1,n2) => `🎉 함께하면 좋은 것: 각자 좋아하는 장소 소개해주기, 서로 다른 취미 체험해보기. 새로운 경험이 우정을 더 깊게 만들어줘요!`,
-    tip: () => `어쩌면 가장 필요한 타입의 친구일 수 있어요. 내가 못 보는 것을 봐주고, 다른 시각을 선물해주는 친구랍니다 🌈`
+  { min: 70, label: 'ë¯¿ìì§í ì¹êµ¬ ð', emoji: 'â¨',
+    bond: (n1,n2,gz1,gz2) => `${n1}ê³¼ ${n2}ë ìë¡ìê² ë ë í ë²íëª©ì´ ëì´ì£¼ë ì¬ì´ìì. ì±í¥ì ì¡°ê¸ ë¤ë¥¼ ì ìì§ë§, ê·¸ ë¤ë¦ì´ ì¤íë ¤ ìë¡ë¥¼ ë³´ìí´ì¤ì. íë  ì¼ì´ ìê¸°ë©´ ê°ì¥ ë¨¼ì  ìê°ëë ì¹êµ¬ê° ë  ê±°ìì.`,
+    trouble: (n1,n2) => `ì·¨í¥ì´ë ê´ì¬ì¬ê° ë¬ë¼ ê°ë ê³µíµ íì  ì°¾ê¸°ê° ì´ë ¤ì¸ ì ìì´ì. íì§ë§ ìë¡ì ì¸ê³ë¥¼ ì¡°ê¸ì© ê³µì íë©´ ë íì±í ì°ì ì´ ë§ë¤ì´ì§ëµëë¤.`,
+    activity: (n1,n2) => `ð í¨ê»íë©´ ì¢ì ê²: ê°ì ì¢ìíë ì¥ì ìê°í´ì£¼ê¸°, ìë¡ ë¤ë¥¸ ì·¨ë¯¸ ì²´íí´ë³´ê¸°. ìë¡ì´ ê²½íì´ ì°ì ì ë ê¹ê² ë§ë¤ì´ì¤ì!`,
+    tip: () => `ì´ì©ë©´ ê°ì¥ íìí íìì ì¹êµ¬ì¼ ì ìì´ì. ë´ê° ëª» ë³´ë ê²ì ë´ì£¼ê³ , ë¤ë¥¸ ìê°ì ì ë¬¼í´ì£¼ë ì¹êµ¬ëëë¤ ð`
   },
-  { min: 55, label: '성장하는 우정 🌱', emoji: '🌿',
-    bond: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}띠)과 ${n2}(${gz2.zodiac}띠)는 처음엔 어색하지만 시간이 지날수록 이해가 깊어지는 사이예요. 서로 다른 에너지가 충돌할 때도 있지만, 그 과정에서 서로를 더 잘 알아가게 돼요. 오래된 친구가 될 잠재력이 충분해요!`,
-    trouble: (n1,n2) => `솔직한 대화가 필요해요. 서운한 게 생겼을 때 참다가 쌓이면 관계가 어색해질 수 있어요. 작은 것도 바로 이야기하는 습관을 들여보세요.`,
-    activity: (n1,n2) => `🎉 함께하면 좋은 것: 둘만의 규칙 정하기, 서로에게 솔직한 편지 써보기. 노력을 보여주는 것이 이 우정의 핵심이에요!`,
-    tip: () => `이 관계는 노력한 만큼 빛나요. 포기하지 말고, 꾸준히 연락하고 만나다 보면 언젠가 "진짜 친구"가 되는 순간이 찾아온답니다 💪`
+  { min: 55, label: 'ì±ì¥íë ì°ì  ð±', emoji: 'ð¿',
+    bond: (n1,n2,gz1,gz2) => `${n1}(${gz1.zodiac}ë )ê³¼ ${n2}(${gz2.zodiac}ë )ë ì²ìì ì´ìíì§ë§ ìê°ì´ ì§ë ìë¡ ì´í´ê° ê¹ì´ì§ë ì¬ì´ìì. ìë¡ ë¤ë¥¸ ìëì§ê° ì¶©ëí  ëë ìì§ë§, ê·¸ ê³¼ì ìì ìë¡ë¥¼ ë ì ììê°ê² ë¼ì. ì¤ëë ì¹êµ¬ê° ë  ì ì¬ë ¥ì´ ì¶©ë¶í´ì!`,
+    trouble: (n1,n2) => `ìì§í ëíê° íìí´ì. ìì´í ê² ìê²¼ì ë ì°¸ë¤ê° ìì´ë©´ ê´ê³ê° ì´ìí´ì§ ì ìì´ì. ìì ê²ë ë°ë¡ ì´ì¼ê¸°íë ìµê´ì ë¤ì¬ë³´ì¸ì.`,
+    activity: (n1,n2) => `ð í¨ê»íë©´ ì¢ì ê²: ëë§ì ê·ì¹ ì íê¸°, ìë¡ìê² ìì§í í¸ì§ ì¨ë³´ê¸°. ë¸ë ¥ì ë³´ì¬ì£¼ë ê²ì´ ì´ ì°ì ì íµì¬ì´ìì!`,
+    tip: () => `ì´ ê´ê³ë ë¸ë ¥í ë§í¼ ë¹ëì. í¬ê¸°íì§ ë§ê³ , ê¾¸ì¤í ì°ë½íê³  ë§ëë¤ ë³´ë©´ ì¸ì  ê° "ì§ì§ ì¹êµ¬"ê° ëë ìê°ì´ ì°¾ìì¨ëµëë¤ ðª`
   },
-  { min: 0, label: '독특한 케미 🔥', emoji: '⚡',
-    bond: (n1,n2,gz1,gz2) => `${n1}과 ${n2}는 정말 개성 넘치는 조합이에요! 서로 이해 못 할 때도 있고 답답할 수도 있지만, 그래서 더 기억에 남는 사이가 됩니다. 이 우정은 평범하지 않고, 그래서 더 특별해요.`,
-    trouble: (n1,n2) => `의견 충돌이 잦을 수 있어요. 서로의 가치관이 많이 달라 자주 부딪힐 수 있지만, 상대를 바꾸려 하지 말고 있는 그대로 인정해주는 연습을 해보세요.`,
-    activity: (n1,n2) => `🎉 함께하면 좋은 것: 함께 뭔가 만들거나 도전해보기. 공통의 목표가 생기면 케미가 폭발할 수 있어요! 게임이나 요리 같은 협동 활동 추천!`,
-    tip: () => `이 우정, 쉽지는 않지만 포기하기엔 너무 아까워요. 서로에게 특별한 자극이 되는 관계는 평생 소수만 만날 수 있답니다 🌟`
+  { min: 0, label: 'ëí¹í ì¼ë¯¸ ð¥', emoji: 'â¡',
+    bond: (n1,n2,gz1,gz2) => `${n1}ê³¼ ${n2}ë ì ë§ ê°ì± ëì¹ë ì¡°í©ì´ìì! ìë¡ ì´í´ ëª» í  ëë ìê³  ëµëµí  ìë ìì§ë§, ê·¸ëì ë ê¸°ìµì ë¨ë ì¬ì´ê° ë©ëë¤. ì´ ì°ì ì íë²íì§ ìê³ , ê·¸ëì ë í¹ë³í´ì.`,
+    trouble: (n1,n2) => `ìê²¬ ì¶©ëì´ ì¦ì ì ìì´ì. ìë¡ì ê°ì¹ê´ì´ ë§ì´ ë¬ë¼ ìì£¼ ë¶ëªí ì ìì§ë§, ìëë¥¼ ë°ê¾¸ë ¤ íì§ ë§ê³  ìë ê·¸ëë¡ ì¸ì í´ì£¼ë ì°ìµì í´ë³´ì¸ì.`,
+    activity: (n1,n2) => `ð í¨ê»íë©´ ì¢ì ê²: í¨ê» ë­ê° ë§ë¤ê±°ë ëì í´ë³´ê¸°. ê³µíµì ëª©íê° ìê¸°ë©´ ì¼ë¯¸ê° í­ë°í  ì ìì´ì! ê²ìì´ë ìë¦¬ ê°ì íë íë ì¶ì²!`,
+    tip: () => `ì´ ì°ì , ì½ì§ë ìì§ë§ í¬ê¸°íê¸°ì ëë¬´ ìê¹ìì. ìë¡ìê² í¹ë³í ìê·¹ì´ ëë ê´ê³ë íì ììë§ ë§ë  ì ìëµëë¤ ð`
   }
 ];
 
@@ -686,24 +686,24 @@ function getFriendText(score) {
 }
 
 // =====================================================
-//  현재 모드 & 상태
+//  íì¬ ëª¨ë & ìí
 // =====================================================
 let currentMode = 'couple';
 
-// 페이지 로드 시: returnurl로 돌아온 경우 자동 처리
+// íì´ì§ ë¡ë ì: returnurlë¡ ëìì¨ ê²½ì° ìë ì²ë¦¬
 window.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   const paidParam = urlParams.get('paid');
   if (paidParam && paidParam === sessionId) {
-    // 결제 완료 후 돌아온 것 → 세션 저장 후 결과 화면에서 잠금 해제 안내
+    // ê²°ì  ìë£ í ëìì¨ ê² â ì¸ì ì ì¥ í ê²°ê³¼ íë©´ìì ì ê¸ í´ì  ìë´
     sessionStorage.setItem('saju_paid_' + sessionId, '1');
     isUnlocked = true;
-    // URL 정리
+    // URL ì ë¦¬
     const url = new URL(window.location.href);
     url.searchParams.delete('paid');
     window.history.replaceState({}, '', url);
-    // 사용자에게 안내 토스트
-    showToast('✅ 결제 완료! 사주 결과를 분석해보세요 🌸', '#FF85A1');
+    // ì¬ì©ììê² ìë´ í ì¤í¸
+    showToast('â ê²°ì  ìë£! ì¬ì£¼ ê²°ê³¼ë¥¼ ë¶ìí´ë³´ì¸ì ð¸', '#FF85A1');
   }
 });
 
@@ -732,11 +732,11 @@ function switchTab(mode) {
 }
 
 // =====================================================
-//  분석 시작
+//  ë¶ì ìì
 // =====================================================
 function analyzeCouple() {
-  const n1 = document.getElementById('c-name1').value.trim() || '나';
-  const n2 = document.getElementById('c-name2').value.trim() || '상대방';
+  const n1 = document.getElementById('c-name1').value.trim() || 'ë';
+  const n2 = document.getElementById('c-name2').value.trim() || 'ìëë°©';
   const b1 = document.getElementById('c-birth1').value;
   const b2 = document.getElementById('c-birth2').value;
   const g1 = document.getElementById('c-gender1').value;
@@ -744,7 +744,7 @@ function analyzeCouple() {
   const h1 = document.getElementById('c-hour1').value;
   const h2 = document.getElementById('c-hour2').value;
 
-  if (!b1 || !b2) { alert('두 사람의 생년월일을 모두 입력해주세요 🌸'); return; }
+  if (!b1 || !b2) { alert('ë ì¬ëì ìëìì¼ì ëª¨ë ìë ¥í´ì£¼ì¸ì ð¸'); return; }
 
   const y1 = parseInt(b1.split('-')[0]);
   const y2 = parseInt(b2.split('-')[0]);
@@ -759,8 +759,8 @@ function analyzeCouple() {
 }
 
 function analyzeFriend() {
-  const n1 = document.getElementById('f-name1').value.trim() || '나';
-  const n2 = document.getElementById('f-name2').value.trim() || '친구';
+  const n1 = document.getElementById('f-name1').value.trim() || 'ë';
+  const n2 = document.getElementById('f-name2').value.trim() || 'ì¹êµ¬';
   const b1 = document.getElementById('f-birth1').value;
   const b2 = document.getElementById('f-birth2').value;
   const g1 = document.getElementById('f-gender1').value;
@@ -768,7 +768,7 @@ function analyzeFriend() {
   const h1 = document.getElementById('f-hour1').value;
   const h2 = document.getElementById('f-hour2').value;
 
-  if (!b1 || !b2) { alert('두 사람의 생년월일을 모두 입력해주세요 🌸'); return; }
+  if (!b1 || !b2) { alert('ë ì¬ëì ìëìì¼ì ëª¨ë ìë ¥í´ì£¼ì¸ì ð¸'); return; }
 
   const y1 = parseInt(b1.split('-')[0]);
   const y2 = parseInt(b2.split('-')[0]);
@@ -783,10 +783,10 @@ function analyzeFriend() {
 }
 
 // =====================================================
-//  모달
+//  ëª¨ë¬
 // =====================================================
 function showModal() {
-  // 이미 이 세션에서 결제한 경우 바로 결과 공개
+  // ì´ë¯¸ ì´ ì¸ììì ê²°ì í ê²½ì° ë°ë¡ ê²°ê³¼ ê³µê°
   if (sessionStorage.getItem('saju_paid_' + sessionId) === '1') {
     isUnlocked = true;
     renderResult(true);
@@ -799,54 +799,54 @@ function closeModal() {
   renderResult(false);
 }
 // =====================================================
-//  페이앱 설정 (배포 후 아래 값을 실제 값으로 변경)
+//  íì´ì± ì¤ì  (ë°°í¬ í ìë ê°ì ì¤ì  ê°ì¼ë¡ ë³ê²½)
 // =====================================================
 const PAYAPP_CONFIG = {
-  userid:   'gpmkt327',   // ← 페이앱 판매자 아이디로 변경
-  shopname: '사주봐줄게',
-  goodname: '커플/우정 사주 결과 보기',
+  userid:   'gpmkt327',   // â íì´ì± íë§¤ì ìì´ëë¡ ë³ê²½
+  shopname: 'ì¬ì£¼ë´ì¤ê²',
+  goodname: 'ì»¤í/ì°ì  ì¬ì£¼ ê²°ê³¼ ë³´ê¸°',
   price:    '1000',
-  // Vercel 배포 후 실제 URL로 변경 (예: https://사주봐줄게.vercel.app)
+  // Vercel ë°°í¬ í ì¤ì  URLë¡ ë³ê²½ (ì: https://ì¬ì£¼ë´ì¤ê².vercel.app)
   VERCEL_URL: 'https://sajubwajulge.vercel.app',
 };
 
-// 브라우저 세션 ID (결제 완료 추적용)
+// ë¸ë¼ì°ì  ì¸ì ID (ê²°ì  ìë£ ì¶ì ì©)
 let sessionId = sessionStorage.getItem('saju_session');
 if (!sessionId) {
   sessionId = 'saju_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
   sessionStorage.setItem('saju_session', sessionId);
 }
 
-let pollTimer = null; // 결제 확인 폴링 타이머
+let pollTimer = null; // ê²°ì  íì¸ í´ë§ íì´ë¨¸
 
-// ── 결제 시작 ─────────────────────────────────────────
+// ââ ê²°ì  ìì âââââââââââââââââââââââââââââââââââââââââ
 function simulatePay() {
   document.getElementById('payOverlay').classList.remove('show');
 
-  // 페이앱 JS SDK로 결제창 호출
+  // íì´ì± JS SDKë¡ ê²°ì ì°½ í¸ì¶
   PayApp.setDefault('userid',   PAYAPP_CONFIG.userid);
   PayApp.setDefault('shopname', PAYAPP_CONFIG.shopname);
 
   PayApp.setParam('goodname',   PAYAPP_CONFIG.goodname);
   PayApp.setParam('price',      PAYAPP_CONFIG.price);
-  PayApp.setParam('smsuse',     'n');
-  PayApp.setParam('var1',       sessionId);       // 세션 ID → 웹훅에서 결제 매칭용
+  PayApp.setParam('smsuse',     'y');
+  PayApp.setParam('var1',       sessionId);       // ì¸ì ID â ì¹íìì ê²°ì  ë§¤ì¹­ì©
   PayApp.setParam('skip_cstpage', 'y');
   PayApp.setParam('checkretry', 'y');
-  // feedbackurl: Vercel 배포 후 실제 URL 입력
+  // feedbackurl: Vercel ë°°í¬ í ì¤ì  URL ìë ¥
   PayApp.setParam('feedbackurl',
     PAYAPP_CONFIG.VERCEL_URL + '/api/payapp-webhook'
   );
-  // returnurl: 결제 완료 후 사용자가 돌아올 페이지 (현재 페이지)
+  // returnurl: ê²°ì  ìë£ í ì¬ì©ìê° ëìì¬ íì´ì§ (íì¬ íì´ì§)
   PayApp.setParam('returnurl', window.location.href + '?paid=' + sessionId);
 
   PayApp.payrequest();
 
-  // 결제창이 열린 후 → 대기 모달 표시 + 폴링 시작
+  // ê²°ì ì°½ì´ ì´ë¦° í â ëê¸° ëª¨ë¬ íì + í´ë§ ìì
   setTimeout(() => showWaitingModal(), 500);
 }
 
-// ── 결제 대기 모달 ─────────────────────────────────────
+// ââ ê²°ì  ëê¸° ëª¨ë¬ âââââââââââââââââââââââââââââââââââââ
 function showWaitingModal() {
   const existing = document.getElementById('waitingOverlay');
   if (existing) existing.remove();
@@ -856,35 +856,35 @@ function showWaitingModal() {
   overlay.id = 'waitingOverlay';
   overlay.innerHTML = `
     <div class="modal">
-      <div class="modal-emoji" id="waitEmoji">⏳</div>
-      <h2 id="waitTitle">결제 확인 중...</h2>
+      <div class="modal-emoji" id="waitEmoji">â³</div>
+      <h2 id="waitTitle">ê²°ì  íì¸ ì¤...</h2>
       <p id="waitDesc" style="color:var(--text-light);font-size:0.9rem;line-height:1.7;margin-bottom:20px;">
-        결제창에서 1000원 결제를 완료해주세요.<br>
-        <span style="color:#FF85A1;font-weight:600;">완료되면 자동으로 결과가 열려요 ✨</span>
+        ê²°ì ì°½ìì 1000ì ê²°ì ë¥¼ ìë£í´ì£¼ì¸ì.<br>
+        <span style="color:#FF85A1;font-weight:600;">ìë£ëë©´ ìëì¼ë¡ ê²°ê³¼ê° ì´ë ¤ì â¨</span>
       </p>
       <div style="margin-bottom:16px;">
         <div style="width:100%;background:#FFE8F0;border-radius:20px;height:6px;overflow:hidden;">
           <div id="waitBar" style="width:0%;background:linear-gradient(90deg,#FF85A1,#D66FA8);height:100%;border-radius:20px;transition:width 0.5s;"></div>
         </div>
-        <p style="font-size:0.8rem;color:var(--text-light);margin-top:6px;" id="waitCount">최대 3분간 확인합니다...</p>
+        <p style="font-size:0.8rem;color:var(--text-light);margin-top:6px;" id="waitCount">ìµë 3ë¶ê° íì¸í©ëë¤...</p>
       </div>
-      <div class="divider">결제 안 하셨나요?</div>
+      <div class="divider">ê²°ì  ì íì¨ëì?</div>
       <button class="btn-kakao" style="margin-top:12px;" onclick="document.getElementById('waitingOverlay').remove(); stopPoll(); kakaoShare();">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#3C1E1E"><path d="M12 3C6.48 3 2 6.72 2 11.3c0 2.87 1.65 5.4 4.14 6.97l-1.04 3.8 4.35-2.86c.83.15 1.66.22 2.55.22 5.52 0 10-3.72 10-8.3C22 6.72 17.52 3 12 3z"/></svg>
-        카카오톡 공유하고 무료로 보기
+        ì¹´ì¹´ì¤í¡ ê³µì íê³  ë¬´ë£ë¡ ë³´ê¸°
       </button>
-      <button class="btn-cancel" onclick="document.getElementById('waitingOverlay').remove(); stopPoll(); renderResult(false);">✕ 닫기</button>
+      <button class="btn-cancel" onclick="document.getElementById('waitingOverlay').remove(); stopPoll(); renderResult(false);">â ë«ê¸°</button>
     </div>
   `;
   document.body.appendChild(overlay);
 
-  // 폴링 시작 (3초마다, 최대 3분)
+  // í´ë§ ìì (3ì´ë§ë¤, ìµë 3ë¶)
   startPolling();
 }
 
-// ── 결제 완료 폴링 ─────────────────────────────────────
+// ââ ê²°ì  ìë£ í´ë§ âââââââââââââââââââââââââââââââââââââ
 let pollCount = 0;
-const MAX_POLL = 60; // 3초 × 60 = 3분
+const MAX_POLL = 60; // 3ì´ Ã 60 = 3ë¶
 
 function startPolling() {
   pollCount = 0;
@@ -894,9 +894,9 @@ function startPolling() {
     const bar = document.getElementById('waitBar');
     const cnt = document.getElementById('waitCount');
     if (bar) bar.style.width = Math.min((pollCount / MAX_POLL) * 100, 100) + '%';
-    if (cnt) cnt.textContent = `확인 중... (${pollCount}/${MAX_POLL})`;
+    if (cnt) cnt.textContent = `íì¸ ì¤... (${pollCount}/${MAX_POLL})`;
 
-    // 1. URL 파라미터 확인 (returnurl로 돌아온 경우)
+    // 1. URL íë¼ë¯¸í° íì¸ (returnurlë¡ ëìì¨ ê²½ì°)
     const urlParams = new URLSearchParams(window.location.search);
     const paidParam = urlParams.get('paid');
     if (paidParam && paidParam === sessionId) {
@@ -904,7 +904,7 @@ function startPolling() {
       return;
     }
 
-    // 2. Vercel API 폴링 (feedbackurl이 작동 중인 경우)
+    // 2. Vercel API í´ë§ (feedbackurlì´ ìë ì¤ì¸ ê²½ì°)
     try {
       const resp = await fetch(
         PAYAPP_CONFIG.VERCEL_URL + '/api/payapp-webhook?session=' + sessionId
@@ -915,19 +915,19 @@ function startPolling() {
         return;
       }
     } catch (e) {
-      // 서버 미연결 상태 → 조용히 무시
+      // ìë² ë¯¸ì°ê²° ìí â ì¡°ì©í ë¬´ì
     }
 
-    // 타임아웃
+    // íììì
     if (pollCount >= MAX_POLL) {
       stopPoll();
       const title = document.getElementById('waitTitle');
       const desc = document.getElementById('waitDesc');
       const emoji = document.getElementById('waitEmoji');
-      if (emoji) emoji.textContent = '⌛';
-      if (title) title.textContent = '시간이 초과됐어요';
-      if (desc) desc.innerHTML = `결제를 완료하셨나요?<br>아래 버튼을 눌러 결과를 확인하세요.
-        <br><br><button class="btn-primary" onclick="onPaymentSuccess()" style="margin-top:8px;">✅ 결제했어요, 결과 보기</button>`;
+      if (emoji) emoji.textContent = 'â';
+      if (title) title.textContent = 'ìê°ì´ ì´ê³¼ëì´ì';
+      if (desc) desc.innerHTML = `ê²°ì ë¥¼ ìë£íì¨ëì?<br>ìë ë²í¼ì ëë¬ ê²°ê³¼ë¥¼ íì¸íì¸ì.
+        <br><br><button class="btn-primary" onclick="onPaymentSuccess()" style="margin-top:8px;">â ê²°ì íì´ì, ê²°ê³¼ ë³´ê¸°</button>`;
     }
   }, 3000);
 }
@@ -941,10 +941,10 @@ function onPaymentSuccess() {
   const overlay = document.getElementById('waitingOverlay');
   if (overlay) overlay.remove();
   isUnlocked = true;
-  // 세션에 결제 완료 기록 (새로고침 해도 유지)
+  // ì¸ìì ê²°ì  ìë£ ê¸°ë¡ (ìë¡ê³ ì¹¨ í´ë ì ì§)
   sessionStorage.setItem('saju_paid_' + sessionId, '1');
   renderResult(true);
-  // URL에서 paid 파라미터 제거 (깔끔하게)
+  // URLìì paid íë¼ë¯¸í° ì ê±° (ê¹ëíê²)
   const url = new URL(window.location.href);
   url.searchParams.delete('paid');
   window.history.replaceState({}, '', url);
@@ -952,7 +952,7 @@ function onPaymentSuccess() {
 function kakaoShare() {
   document.getElementById('payOverlay').classList.remove('show');
   isUnlocked = true;
-  // 실제 카카오 SDK 연동 시 여기서 Kakao.Share.sendDefault() 호출
+  // ì¤ì  ì¹´ì¹´ì¤ SDK ì°ë ì ì¬ê¸°ì Kakao.Share.sendDefault() í¸ì¶
   showKakaoToast();
   renderResult(true);
 }
@@ -960,13 +960,13 @@ function kakaoShare() {
 function showKakaoToast() {
   const toast = document.createElement('div');
   toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#FEE500;color:#3C1E1E;padding:12px 24px;border-radius:30px;font-weight:700;font-size:0.9rem;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.2);';
-  toast.textContent = '✓ 공유 링크가 복사됐어요! 친구에게 보내주세요 🎉';
+  toast.textContent = 'â ê³µì  ë§í¬ê° ë³µì¬ëì´ì! ì¹êµ¬ìê² ë³´ë´ì£¼ì¸ì ð';
   document.body.appendChild(toast);
   setTimeout(() => toast.remove(), 3000);
 }
 
 // =====================================================
-//  결과 렌더링
+//  ê²°ê³¼ ë ëë§
 // =====================================================
 function renderResult(unlocked) {
   const d = currentData;
@@ -981,28 +981,28 @@ function renderResult(unlocked) {
     <div class="result-header">
       <span class="big-emoji">${t.emoji}</span>
       <h2>${d.n1} & ${d.n2}</h2>
-      <p style="color:var(--text-light);margin-top:4px;">${isCouple ? '커플 궁합' : '우정 지수'} 분석 결과</p>
+      <p style="color:var(--text-light);margin-top:4px;">${isCouple ? 'ì»¤í ê¶í©' : 'ì°ì  ì§ì'} ë¶ì ê²°ê³¼</p>
       <div class="score-wrap">
         <div class="score-circle" style="background:linear-gradient(135deg,${scoreColor},${scoreColor}cc)">${d.score}</div>
         <span class="score-label">${t.label}</span>
       </div>
     </div>
 
-    <!-- 띠 & 오행 정보 -->
+    <!-- ë  & ì¤í ì ë³´ -->
     <div class="card">
-      <h3>🔮 두 사람의 사주 기운</h3>
+      <h3>ð® ë ì¬ëì ì¬ì£¼ ê¸°ì´</h3>
       <div style="display:flex;gap:16px;flex-wrap:wrap;">
         <div style="flex:1;min-width:120px;background:rgba(255,179,198,0.2);border-radius:14px;padding:14px;text-align:center;">
           <div style="font-size:2rem;">${d.gz1.emoji}</div>
           <div style="font-weight:700;color:var(--pink-dark);margin-top:4px;">${d.n1}</div>
-          <div style="font-size:0.85rem;color:var(--text-light);">${d.gz1.zodiac}띠 · ${d.gz1.elem}의 기운</div>
-          <div style="font-size:0.8rem;color:var(--text-light);">${d.gz1.h}${d.gz1.e}년생</div>
+          <div style="font-size:0.85rem;color:var(--text-light);">${d.gz1.zodiac}ë  Â· ${d.gz1.elem}ì ê¸°ì´</div>
+          <div style="font-size:0.8rem;color:var(--text-light);">${d.gz1.h}${d.gz1.e}ëì</div>
         </div>
         <div style="flex:1;min-width:120px;background:rgba(162,155,254,0.2);border-radius:14px;padding:14px;text-align:center;">
           <div style="font-size:2rem;">${d.gz2.emoji}</div>
           <div style="font-weight:700;color:#6C5CE7;margin-top:4px;">${d.n2}</div>
-          <div style="font-size:0.85rem;color:var(--text-light);">${d.gz2.zodiac}띠 · ${d.gz2.elem}의 기운</div>
-          <div style="font-size:0.8rem;color:var(--text-light);">${d.gz2.h}${d.gz2.e}년생</div>
+          <div style="font-size:0.85rem;color:var(--text-light);">${d.gz2.zodiac}ë  Â· ${d.gz2.elem}ì ê¸°ì´</div>
+          <div style="font-size:0.8rem;color:var(--text-light);">${d.gz2.h}${d.gz2.e}ëì</div>
         </div>
       </div>
     </div>
@@ -1011,48 +1011,48 @@ function renderResult(unlocked) {
   if (isCouple) {
     fullHtml += `
       <div class="result-card love">
-        <h4>💕 궁합 분석</h4>
+        <h4>ð ê¶í© ë¶ì</h4>
         <p>${t.love(d.n1, d.n2, d.gz1, d.gz2)}</p>
         <div class="tag-row">
-          <span class="tag">${d.gz1.elem}의 기운</span>
-          <span class="tag blue">${d.gz2.elem}의 기운</span>
-          <span class="tag yellow">${d.score >= 75 ? '호궁합' : d.score >= 55 ? '중궁합' : '도전궁합'}</span>
+          <span class="tag">${d.gz1.elem}ì ê¸°ì´</span>
+          <span class="tag blue">${d.gz2.elem}ì ê¸°ì´</span>
+          <span class="tag yellow">${d.score >= 75 ? 'í¸ê¶í©' : d.score >= 55 ? 'ì¤ê¶í©' : 'ëì ê¶í©'}</span>
         </div>
       </div>
       <div class="result-card money">
-        <h4>💰 금전 & 미래 운</h4>
+        <h4>ð° ê¸ì  & ë¯¸ë ì´</h4>
         <p>${t.money(d.n1, d.n2)}</p>
       </div>
       <div class="result-card warning">
-        <h4>⚠️ 주의할 점</h4>
+        <h4>â ï¸ ì£¼ìí  ì </h4>
         <p>${t.warning(d.n1, d.n2)}</p>
       </div>
       <div class="result-card tip">
-        <h4>🌟 사주 선생님의 한마디</h4>
+        <h4>ð ì¬ì£¼ ì ìëì íë§ë</h4>
         <p>${t.tip(d.n1, d.n2)}</p>
       </div>
     `;
   } else {
     fullHtml += `
       <div class="result-card friend">
-        <h4>🫂 우정 분석</h4>
+        <h4>ð« ì°ì  ë¶ì</h4>
         <p>${t.bond(d.n1, d.n2, d.gz1, d.gz2)}</p>
         <div class="tag-row">
-          <span class="tag">${d.gz1.elem}의 기운</span>
-          <span class="tag blue">${d.gz2.elem}의 기운</span>
-          <span class="tag purple">${d.score >= 75 ? '최고케미' : d.score >= 55 ? '좋은궁합' : '도전케미'}</span>
+          <span class="tag">${d.gz1.elem}ì ê¸°ì´</span>
+          <span class="tag blue">${d.gz2.elem}ì ê¸°ì´</span>
+          <span class="tag purple">${d.score >= 75 ? 'ìµê³ ì¼ë¯¸' : d.score >= 55 ? 'ì¢ìê¶í©' : 'ëì ì¼ë¯¸'}</span>
         </div>
       </div>
       <div class="result-card warning">
-        <h4>💬 이런 점 조심해요</h4>
+        <h4>ð¬ ì´ë° ì  ì¡°ì¬í´ì</h4>
         <p>${t.trouble(d.n1, d.n2)}</p>
       </div>
       <div class="result-card tip" style="border-left-color:#FFD700;">
-        <h4>🎉 함께하면 좋은 활동</h4>
+        <h4>ð í¨ê»íë©´ ì¢ì íë</h4>
         <p>${t.activity(d.n1, d.n2)}</p>
       </div>
       <div class="result-card tip">
-        <h4>🌟 사주 선생님의 한마디</h4>
+        <h4>ð ì¬ì£¼ ì ìëì íë§ë</h4>
         <p>${t.tip()}</p>
       </div>
     `;
@@ -1065,23 +1065,23 @@ function renderResult(unlocked) {
     rc.innerHTML = fullHtml;
     rs.classList.add('show');
   } else {
-    // 블러 처리된 미리보기
+    // ë¸ë¬ ì²ë¦¬ë ë¯¸ë¦¬ë³´ê¸°
     rc.innerHTML = `
       <div class="blur-result">${fullHtml}</div>
       <div class="unlock-notice">
-        <p>🔮 분석이 완료됐어요!<br>결과를 확인하려면 아래 방법 중 하나를 선택해주세요.</p>
-        <button class="btn-pay" onclick="showModal()">💳 1000원 결제하고 보기</button>
-        <div class="or-text">또는</div>
+        <p>ð® ë¶ìì´ ìë£ëì´ì!<br>ê²°ê³¼ë¥¼ íì¸íë ¤ë©´ ìë ë°©ë² ì¤ íëë¥¼ ì íí´ì£¼ì¸ì.</p>
+        <button class="btn-pay" onclick="showModal()">ð³ 1000ì ê²°ì íê³  ë³´ê¸°</button>
+        <div class="or-text">ëë</div>
         <button class="btn-kakao" onclick="kakaoShare()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#3C1E1E"><path d="M12 3C6.48 3 2 6.72 2 11.3c0 2.87 1.65 5.4 4.14 6.97l-1.04 3.8 4.35-2.86c.83.15 1.66.22 2.55.22 5.52 0 10-3.72 10-8.3C22 6.72 17.52 3 12 3z"/></svg>
-          카카오톡 공유하고 무료로 보기
+          ì¹´ì¹´ì¤í¡ ê³µì íê³  ë¬´ë£ë¡ ë³´ê¸°
         </button>
       </div>
     `;
     rs.classList.add('show');
   }
 
-  // 부드럽게 스크롤
+  // ë¶ëë½ê² ì¤í¬ë¡¤
   setTimeout(() => {
     rs.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 100);
